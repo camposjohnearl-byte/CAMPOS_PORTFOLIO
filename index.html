@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090a10">
+<meta name="color-scheme" content="dark">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;filter:none!important}.intro-loader{display:none!important}</style></noscript>
+<title>[YOUR NAME] | BSIT Portfolio</title>
+<meta name="description" content="BSIT Industry-Ready Portfolio - Datamex College of Saint Adeline">
+
+<!-- Google Fonts (Plus Jakarta Sans, Inter, JetBrains Mono) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Custom Stylesheet & Motion System -->
+<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- Animated Background (aurora ribbons + line grid + rising light motes) -->
+<div class="bg-fx" aria-hidden="true">
+  <span class="bg-aurora bg-aurora-1"></span>
+  <span class="bg-aurora bg-aurora-2"></span>
+  <span class="bg-aurora bg-aurora-3"></span>
+  <span class="bg-grid"></span>
+  <canvas id="bgCanvas"></canvas>
+  <span class="bg-vignette"></span>
+</div>
+
+<!-- Page-Load Branded Intro Curtain (Skippable, Once per Session) -->
+<div id="introLoader" class="intro-loader" aria-hidden="true">
+  <div class="intro-brand">
+    <div class="intro-logo"><i class="bi bi-code-slash"></i></div>
+    <span class="intro-title" data-name>JOHN EARL P. CAMPOS</span>
+  </div>
+  <div class="intro-bar"><div class="intro-bar-fill"></div></div>
+  <span class="intro-skip">Click anywhere to skip</span>
+</div>
+
+<!-- Desktop Custom Cursor Follower -->
+<div id="cursorFollower" class="cursor-follower" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+</div>
+
+<!-- Floating Glassmorphic Pill Navbar with Scroll Progress Bar & Sliding Indicator -->
+<header class="nav">
+  <div id="scrollProgress" class="scroll-progress-bar" aria-hidden="true"></div>
+  <div class="container nav-in">
+    <a class="brand" href="#home">
+      <div class="brand-badge"><i class="bi bi-code-slash"></i></div>
+      <span data-name>[YOUR NAME]</span>
+    </a>
+    <button id="menuBtn" class="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav aria-label="Main Navigation">
+      <div id="navIndicator" class="nav-indicator" aria-hidden="true"></div>
+      <ul id="menu" class="menu">
+        <li style="--i:0"><a href="#home"><i class="bi bi-house-door me-1"></i> Home</a></li>
+        <li style="--i:1"><a href="#profile"><i class="bi bi-person me-1"></i> Profile</a></li>
+        <li style="--i:2"><a href="#skills"><i class="bi bi-lightning me-1"></i> Skills</a></li>
+        <li style="--i:3"><a href="#projects"><i class="bi bi-grid-1x2 me-1"></i> Projects</a></li>
+        <li style="--i:4"><a href="#problem-solving"><i class="bi bi-tools me-1"></i> Problem-Solving</a></li>
+        <li style="--i:5"><a href="#employability"><i class="bi bi-briefcase me-1"></i> Employability</a></li>
+        <li style="--i:6"><a href="#resume"><i class="bi bi-file-earmark-person me-1"></i> Resume</a></li>
+        <li style="--i:7"><a href="#certificates"><i class="bi bi-award me-1"></i> Certificates</a></li>
+        <li style="--i:8"><a href="#github"><i class="bi bi-github me-1"></i> GitHub</a></li>
+        <li style="--i:9"><a href="#contact"><i class="bi bi-envelope me-1"></i> Contact</a></li>
+        <li style="--i:10"><a href="#reflection"><i class="bi bi-journal-text me-1"></i> Reflection</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- 1. HOME / HERO -->
+<section id="home" class="hero">
+  <div class="hero-aurora" aria-hidden="true"></div>
+  <div class="container reveal">
+    <div class="hero-bento">
+      <div class="hero-main-card">
+        <div class="hero-status">
+          <span class="pulse-dot"></span>
+          <span>Available for IT Roles &amp; Capstone Placement</span>
+        </div>
+        <h1 data-name class="hero-title">
+          <span class="hero-line"><span class="hero-word">JOHN</span> <span class="hero-word">EARL</span></span>
+          <span class="hero-line"><span class="hero-word">P.</span> <span class="hero-word">CAMPOS</span></span>
+        </h1>
+        <div class="title">
+          <i class="bi bi-terminal-fill"></i>
+          <span>[PROFESSIONAL TITLE, e.g. Junior Full-Stack Developer]</span>
+        </div>
+        <p class="lead">I am a BSIT graduate with skills in Frontend, Backend, and MySql. I am interested in pursuing a career as a Juinor Software Developer.</p>
+        
+        <div class="btns">
+          <a class="btn-a btn-magnetic" href="#projects">
+            <i class="bi bi-folder-check"></i> VIEW MY PROJECTS
+          </a>
+          <a class="btn-o btn-magnetic" href="resume.pdf" download="Resume.pdf">
+            <i class="bi bi-download"></i> DOWNLOAD RESUME
+          </a>
+          <a class="btn-o btn-magnetic" href="#contact">
+            <i class="bi bi-chat-dots"></i> GET IN TOUCH
+          </a>
+        </div>
+      </div>
+
+      <div class="stats hero-stats-bento">
+        <a class="card card-hover stat-link" href="#skills" aria-label="Go to Skills section">
+          <div class="stat-icon"><i class="bi bi-cpu-fill"></i></div>
+          <div>
+            <strong id="hlSkills">0</strong>
+            <span>Verified Skills with Evidence</span>
+          </div>
+        </a>
+        <a class="card card-hover stat-link" href="#projects" aria-label="Go to Projects section">
+          <div class="stat-icon"><i class="bi bi-layers-fill"></i></div>
+          <div>
+            <strong id="hlProjects">0</strong>
+            <span>Projects Documented</span>
+          </div>
+        </a>
+        <a class="card card-hover stat-link" id="hlContact" href="#contact" aria-label="Go to Contact page">
+          <div class="stat-icon stat-icon-emerald">
+            <i class="bi bi-envelope-check-fill"></i>
+          </div>
+          <div>
+            <strong>Contact Me</strong>
+            <span>Open for Opportunities</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PROFESSIONAL PROFILE -->
+<section id="profile">
+  <div class="container reveal">
+    <div class="section-header">
+      <div class="section-tag"><i class="bi bi-person-badge"></i> 01 // PROFILE</div>
+      <h2>Professional Profile</h2>
+      <p class="section-desc">Background, academic foundation, and technical philosophy in Information Technology.</p>
+    </div>
+
+    <div class="profile-grid">
+      <!-- Photo Card with Avatar Fallback & Badges -->
+      <div class="card photo-card photo">
+        <div class="avatar-wrap">
+          <img class="avatar-img" src="asset/image/ej.jpg" alt="Professional photo of EDSEL" width="320" height="320">
+        </div>
+        <h3 class="profile-name" data-name>John Earl P. Campos</h3>
+        <span class="tag tag-purple mb-2">BSIT Candidate</span>
+        <div class="profile-badges">
+          <span class="profile-pill"><i class="bi bi-mortarboard-fill text-primary"></i> Datamex College of St. Adeline</span>
+          <span class="profile-pill"><i class="bi bi-geo-alt-fill text-danger"></i> Pasay City, Philippines</span>
+          <span class="profile-pill"><i class="bi bi-shield-check text-success"></i> Industry-Ready</span>
+        </div>
+      </div>
+
+      <!-- About Me & Career Objective -->
+      <div class="card">
+        <div class="section-subtitle-wrap">
+          <i class="bi bi-file-earmark-person-fill text-primary icon-lg"></i>
+          <h3 class="h3-clean">About Me</h3>
+        </div>
+        <p class="prose-text">
+          I am a Bachelor of Science in Information Technology (BSIT) student with a strong passion for software development, system analysis, and technology-driven problem solving. Throughout my academic journey, my coursework in programming, database management, and network security has provided me with a solid foundation to handle real-world IT challenges.   I thrive on solving complex technical problems, learning new technologies, and adapting to the fast-paced IT industry. My key strengths include analytical thinking, adaptability, and effective teamwork. I value continuous learning, integrity, and building quality software solutions that improve user experiences.   Looking ahead, I aim to work as a software developer, where I can build scalable systems, contribute to innovative projects, and continuously refine my technical skill set.
+        </p>
+
+        <div class="section-subtitle-wrap mt-lg">
+          <i class="bi bi-compass-fill text-info icon-lg"></i>
+          <h3 class="h3-clean">Career Objective</h3>
+        </div>
+        <p class="prose-text">
+          A dedicated BSIT graduate seeking an entry-level IT role where I can contribute to technical teams by developing secure software solutions while working toward long-term growth into senior leadership.
+        </p>
+
+        <div class="info">
+          <dt><i class="bi bi-award me-1"></i> Degree Program</dt>
+          <dd>Bachelor of Science in Information Technology (BSIT)</dd>
+          <dt><i class="bi bi-building me-1"></i> Institution</dt>
+          <dd>Datamex College of Saint Adeline</dd>
+          <dt><i class="bi bi-check-circle me-1"></i> Availability</dt>
+          <dd>Available for Immediate Onboarding &amp; Internship</dd>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. TECHNICAL SKILLS -->
+<section id="skills" class="alt">
+  <div class="container reveal">
+    <div class="section-header">
+      <div class="section-tag"><i class="bi bi-lightning-charge-fill"></i> 02 // PROFICIENCY</div>
+      <h2>Technical Skills</h2>
+      <p class="section-desc">Categorized core proficiencies backed by practical evidence. Only skills with verifiable project claims are listed.</p>
+    </div>
+
+    <!-- Filter Segmented Control -->
+    <div id="filters" class="filters" role="group" aria-label="Filter skills by category"></div>
+    
+    <!-- Skills Grid -->
+    <div id="skillGrid" class="grid3"></div>
+  </div>
+</section>
+
+<!-- 4. PROJECTS -->
+<section id="projects">
+  <div class="container reveal">
+    <div class="section-header">
+      <div class="section-tag"><i class="bi bi-layers-fill"></i> 03 // PORTFOLIO</div>
+      <h2>Featured Projects</h2>
+      <p class="section-desc">End-to-end applications demonstrating system design, database architecture, CRUD operations, and responsive interfaces.</p>
+    </div>
+
+    <div id="projectGrid" class="grid3"></div>
+  </div>
+</section>
+
+<!-- 5. PROBLEM-SOLVING & DEFENSIVE SECURITY -->
+<section id="problem-solving" class="alt">
+  <div class="container reveal">
+    <div class="section-header">
+      <div class="section-tag"><i class="bi bi-tools"></i> 04 // ENGINEERING &amp; DEFENSE</div>
+      <h2>Problem-Solving &amp; Cybersecurity</h2>
+      <p class="section-desc">Diagnostic case studies, defensive application security practices, and verified AI literacy logs.</p>
+    </div>
+
+    <!-- Troubleshooting Accordion -->
+    <h3 class="cases-heading">
+      <i class="bi bi-wrench-adjustable-circle text-primary"></i> System Troubleshooting Cases
+    </h3>
+    <div id="cases" class="acc"></div>
+
+    <!-- Cybersecurity Case Study -->
+    <div class="gap">
+      <div class="security-banner">
+        <div>
+          <span class="security-tag"><i class="bi bi-shield-exclamation"></i> OWASP TOP 10 (A03:2021) // DEFENSIVE CASE STUDY</span>
+          <h3 class="security-banner-title">Cybersecurity Case Study: SQL Injection (Defensive)</h3>
+          <p class="note m-0">Comprehensive breakdown of injection mechanics, vulnerability vectors, and parameterized defense.</p>
+        </div>
+        <span class="tag tag-cyan"><i class="bi bi-shield-lock-fill"></i> Defensive Engineering</span>
+      </div>
+
+      <!-- Visual Terminal Code Comparison with Type-On Effect -->
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <span class="terminal-dot dot-red"></span>
+            <span class="terminal-dot dot-yellow"></span>
+            <span class="terminal-dot dot-green"></span>
+          </div>
+          <span class="terminal-title">defensive_security_audit.sql</span>
+          <span></span>
+        </div>
+        <div class="terminal-body">
+          <div class="code-vuln" id="codeVuln">// VULNERABLE: Direct concatenation allows query tampering
+String query = "SELECT * FROM users WHERE username = '" + userInput + "' AND pass = '" + pass + "'";</div>
+          <div class="code-safe" id="codeSafe">// SECURE: Parameterized query (Prepared Statements) treats input strictly as data
+PreparedStatement stmt = conn.prepareStatement("SELECT * FROM users WHERE username = ? AND pass = ?");
+stmt.setString(1, userInput);
+stmt.setString(2, pass);</div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card card-hover">
+          <div class="card-subheading-wrap">
+            <i class="bi bi-bug-fill text-danger"></i>
+            <h4 class="card-subheading-title">What is the vulnerability?</h4>
+          </div>
+          <p>SQL Injection happens when an application puts untrusted user input directly into a database query string, causing the input to be parsed and executed as SQL instructions instead of literal data.</p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="card-subheading-wrap">
+            <i class="bi bi-signpost-split-fill text-warning"></i>
+            <h4 class="card-subheading-title">How can it happen?</h4>
+          </div>
+          <p>It occurs when database queries are constructed by joining raw strings from forms, URL query parameters, or HTTP headers without strict server-side validation, type checking, or parameter binding.</p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="card-subheading-wrap">
+            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+            <h4 class="card-subheading-title">What are the risks?</h4>
+          </div>
+          <p>Catastrophic data exfiltration, database corruption or loss, administrative authentication bypass, compliance penalties (e.g. GDPR/DPA), and irreparable damage to organization reputation.</p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="card-subheading-wrap">
+            <i class="bi bi-shield-check text-success"></i>
+            <h4 class="card-subheading-title">How can developers prevent it?</h4>
+          </div>
+          <p>Enforce parameterized queries (Prepared Statements), employ Object-Relational Mappers (ORMs), apply strict server-side input allowlisting, and sanitize all data outputs.</p>
+        </div>
+
+        <div class="card span2">
+          <div class="card-subheading-wrap">
+            <i class="bi bi-lock-fill text-info"></i>
+            <h4 class="card-subheading-title">Security practices to implement</h4>
+          </div>
+          <ul class="security-list">
+            <li><i class="bi bi-check2-circle"></i> <div><strong>Least-Privilege Database Accounts:</strong> Restrict database users so web applications cannot execute DROP or administrative schema mutations.</div></li>
+            <li><i class="bi bi-check2-circle"></i> <div><strong>Cryptographic Hashing:</strong> Protect authentication credentials with salt and Argon2/Bcrypt; return generic authentication error messages.</div></li>
+            <li><i class="bi bi-check2-circle"></i> <div><strong>Strict Server-Side Validation:</strong> Never trust client-side validation alone; sanitize and cast all incoming payloads.</div></li>
+            <li><i class="bi bi-check2-circle"></i> <div><strong>Automated Audits &amp; Dependency Management:</strong> Conduct regular static code analysis (SAST) and patch vulnerabilities promptly.</div></li>
+          </ul>
+          <p class="note mt-sm"><i class="bi bi-pencil-square"></i> [Add how you applied defensive parameterization in your own project.]</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Literacy Evidence -->
+    <div class="gap">
+      <div class="flex-between-wrap">
+        <h3 class="ai-log-heading">
+          <i class="bi bi-robot text-primary"></i> AI Literacy &amp; Verification Evidence
+        </h3>
+        <span class="tag tag-cyan"><i class="bi bi-check-all"></i> Verified Workflows</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="tbl">
+          <caption class="sr">AI usage log</caption>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Task</th>
+              <th>AI Assistance</th>
+              <th>My Verification / Result</th>
+            </tr>
+          </thead>
+          <tbody id="aiLog"></tbody>
+        </table>
+      </div>
+
+      <div class="grid2">
+        <div class="card card-hover">
+          <div class="card-subheading-wrap">
+            <i class="bi bi-stars text-primary"></i>
+            <h4 class="card-subheading-title">What did AI help me accomplish?</h4>
+          </div>
+          <p>[Explain how AI assisted your workflow: code boilerplates, debugging obscure syntax errors, generating mock datasets, or exploring algorithmic alternatives.]</p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="card-subheading-wrap">
+            <i class="bi bi-patch-check-fill text-success"></i>
+            <h4 class="card-subheading-title">What did I personally verify?</h4>
+          </div>
+          <p>[Detail the manual tests, line-by-line code review, test case executions, and documentation checks you performed to validate correctness.]</p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="card-subheading-wrap">
+            <i class="bi bi-lightbulb-fill text-warning"></i>
+            <h4 class="card-subheading-title">What did I learn?</h4>
+          </div>
+          <p>[Reflect on how utilizing AI deepened your architectural understanding and improved your prompt engineering and code review rigor.]</p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="card-subheading-wrap">
+            <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+            <h4 class="card-subheading-title">What limitations or errors did I find?</h4>
+          </div>
+          <p>[Discuss hallucinated libraries, outdated deprecations, or logic oversights you caught and resolved through independent critical analysis.]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. EMPLOYABILITY -->
+<section id="employability">
+  <div class="container reveal">
+    <div class="section-header">
+      <div class="section-tag"><i class="bi bi-briefcase-fill"></i> 05 // READINESS</div>
+      <h2>Employability &amp; Career Plan</h2>
+      <p class="section-desc">Professional readiness assessments, mock evaluation records, and structured milestones for IT industry growth.</p>
+    </div>
+
+    <!-- 3 Milestone Cards -->
+    <div class="grid3">
+      <div class="card card-hover">
+        <div class="card-top-between">
+          <span class="tag tag-purple"><i class="bi bi-person-check"></i> Interview 01</span>
+          <span class="tag tag-cyan">Evaluated</span>
+        </div>
+        <h4>Mock Job Interview</h4>
+        <p class="milestone-meta">Status: [Done / Scheduled]<br>Date: [DATE]</p>
+        <a class="btn-o btn-sm btn-auto" href="[PROOF LINK]" target="_blank" rel="noopener">
+          <i class="bi bi-box-arrow-up-right"></i> View Proof
+        </a>
+      </div>
+
+      <div class="card card-hover">
+        <div class="card-top-between">
+          <span class="tag tag-purple"><i class="bi bi-code-slash"></i> Interview 02</span>
+          <span class="tag tag-cyan">Evaluated</span>
+        </div>
+        <h4>Technical Interview</h4>
+        <p class="milestone-meta">Status: [Done / Scheduled]<br>Date: [DATE]</p>
+        <a class="btn-o btn-sm btn-auto" href="[PROOF LINK]" target="_blank" rel="noopener">
+          <i class="bi bi-box-arrow-up-right"></i> View Proof
+        </a>
+      </div>
+
+      <div class="card card-hover">
+        <div class="card-top-between">
+          <span class="tag tag-purple"><i class="bi bi-mortarboard"></i> Defense</span>
+          <span class="tag tag-cyan">Evaluated</span>
+        </div>
+        <h4>Project Defense</h4>
+        <p class="milestone-meta">Status: [Done / Scheduled]<br>Date: [DATE]</p>
+        <a class="btn-o btn-sm btn-auto" href="[PROOF LINK]" target="_blank" rel="noopener">
+          <i class="bi bi-box-arrow-up-right"></i> View Proof
+        </a>
+      </div>
+    </div>
+
+    <!-- Professional Communication -->
+    <div class="card gap">
+      <div class="section-subtitle-wrap">
+        <i class="bi bi-chat-left-text-fill text-primary icon-lg"></i>
+        <h3 class="h3-clean">Professional Communication</h3>
+      </div>
+      <p class="prose-text">
+        [Describe how you communicate professionally across various contexts: technical documentation, pull request reviews, cross-functional collaboration, client briefings, and team presentations.]
+      </p>
+      
+      <div class="grid3 mt-3">
+        <div class="acc-block">
+          <div class="acc-block-title info"><i class="bi bi-journal-code"></i> Technical Documentation</div>
+          <p class="acc-block-desc">Clear README guides, API endpoints, schema diagrams, and architecture decisions.</p>
+        </div>
+        <div class="acc-block">
+          <div class="acc-block-title info"><i class="bi bi-people-fill"></i> Agile Teamwork</div>
+          <p class="acc-block-desc">Active standup participation, constructive PR critiques, and empathetic pair programming.</p>
+        </div>
+        <div class="acc-block">
+          <div class="acc-block-title info"><i class="bi bi-easel-fill"></i> Stakeholder Briefings</div>
+          <p class="acc-block-desc">Translating technical complexity into executive business benefits and product value.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- IT Career Development Plan -->
+    <div class="card gap">
+      <div class="flex-between-wrap">
+        <div class="flex-align-center">
+          <i class="bi bi-graph-up-arrow text-success icon-lg"></i>
+          <h3 class="h3-clean">IT Career Development Plan</h3>
+        </div>
+        <span class="tag tag-cyan"><i class="bi bi-compass"></i> Strategic Trajectory</span>
+      </div>
+
+      <!-- Preserved Definition List for grading requirements -->
+      <dl class="info">
+        <dt>Target Position</dt><dd>POSITION: Junior Web Developer</dd>
+        <dt>Target IT Field</dt><dd>FIELD: Full-Stack Web Development</dd>
+        <dt>Current Skills</dt><dd>SKILLS: HTML5, CSS3, JavaScript ES6+, Bootstrap, SQL, Git</dd>
+        <dt>Skills to Improve</dt><dd>SKILLS: TypeScript, Advanced Data Structures, Docker Containerization</dd>
+        <dt>Technologies to Learn</dt><dd>TECHNOLOGIES: React/Next.js, Node.js/Express, PostgreSQL, AWS</dd>
+        <dt>Certifications</dt><dd>CERTIFICATIONS: AWS Certified Cloud Practitioner / CompTIA Security+</dd>
+        <dt>6-Month Goal</dt><dd>GOAL: Secure a junior developer role and ship first production feature</dd>
+        <dt>1-Year Goal</dt><dd>GOAL: Attain industry cloud certification and mentor junior apprentices</dd>
+        <dt>3-Year Goal</dt><dd>GOAL: Advance to Mid-level Software Engineer leading full feature lifecycles</dd>
+      </dl>
+
+      <!-- Visual 3-Stage Milestone Roadmap -->
+      <div class="roadmap">
+        <div class="roadmap-step">
+          <div class="roadmap-step-title"><i class="bi bi-flag-fill"></i> Stage 1: 0 - 6 Months</div>
+          <h4 class="roadmap-heading">Industry Onboarding &amp; Foundations</h4>
+          <p class="roadmap-desc">Integrate into an engineering team, adhere to production CI/CD workflows, and resolve first critical bug tickets.</p>
+        </div>
+        <div class="roadmap-step roadmap-cyan">
+          <div class="roadmap-step-title"><i class="bi bi-trophy-fill"></i> Stage 2: 1 Year</div>
+          <h4 class="roadmap-heading">Certification &amp; Domain Mastery</h4>
+          <p class="roadmap-desc">Obtain official vendor credentials (AWS/Cisco), master complex backend state management, and lead modular feature sprints.</p>
+        </div>
+        <div class="roadmap-step roadmap-secondary">
+          <div class="roadmap-step-title"><i class="bi bi-rocket-takeoff-fill"></i> Stage 3: 3 Years</div>
+          <h4 class="roadmap-heading">Mid-Level Engineer &amp; Mentorship</h4>
+          <p class="roadmap-desc">Spearhead application architectures, optimize distributed databases, and mentor oncoming BSIT graduates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. RESUME -->
+<section id="resume" class="alt">
+  <div class="container reveal">
+    <div class="section-header">
+      <div class="section-tag"><i class="bi bi-file-earmark-person-fill"></i> 06 // CURRICULUM VITAE</div>
+      <h2>Resume</h2>
+      <p class="section-desc">Interactive document preview and instant download link formatted to modern IT recruitment standards.</p>
+    </div>
+
+    <div class="card resume-card" id="resumeCard">
+      <!-- Window Title Bar -->
+      <div class="resume-window-bar">
+        <div class="resume-meta">
+          <span class="terminal-dots">
+            <span class="terminal-dot dot-red"></span>
+            <span class="terminal-dot dot-yellow"></span>
+            <span class="terminal-dot dot-green"></span>
+          </span>
+          <span class="resume-filename">resume.pdf</span>
+          <span class="tag tag-sm"><i class="bi bi-file-pdf-fill text-danger"></i> PDF Document</span>
+        </div>
+        <p class="note m-0" id="resumeNote">Preview below. Save your file as <strong>resume.pdf</strong> in this folder.</p>
+        <div class="btns btns-inline">
+          <a class="btn-a btn-sm" href="resume.pdf" download="Resume.pdf">
+            <i class="bi bi-download"></i> Download Resume
+          </a>
+          <a class="btn-o btn-sm" href="resume.pdf" target="_blank" rel="noopener">
+            <i class="bi bi-box-arrow-up-right"></i> Open in New Tab
+          </a>
+        </div>
+      </div>
+
+      <object data="resume.pdf#toolbar=0&amp;view=FitH" type="application/pdf" class="pdf" aria-label="One-page resume preview">
+        <div class="pdf-fallback">
+          <i class="bi bi-file-earmark-pdf text-primary pdf-fallback-icon"></i>
+          <h4 class="pdf-fallback-title">PDF Preview Unavailable in this Browser View</h4>
+          <p class="note">You can download the full PDF document using the action button above.</p>
+          <a class="btn-a" href="resume.pdf" download="Resume.pdf"><i class="bi bi-download"></i> Download Resume PDF</a>
+        </div>
+      </object>
+    </div>
+  </div>
+</section>
+
+<!-- 8. CERTIFICATES -->
+<section id="certificates">
+  <div class="container reveal">
+    <div class="section-header">
+      <div class="section-tag"><i class="bi bi-award-fill"></i> 07 // CREDENTIALS</div>
+      <h2>Certificates &amp; Achievements</h2>
+      <p class="section-desc">Industry credentials, online course completions, and collegiate honors validating technical competence.</p>
+    </div>
+    
+    <div id="certGrid" class="grid3"></div>
+  </div>
+</section>
+
+<!-- 9. GITHUB -->
+<section id="github" class="alt">
+  <div class="container reveal">
+    <div class="section-header">
+      <div class="section-tag"><i class="bi bi-git"></i> 08 // CODE REPOSITORIES</div>
+      <h2>GitHub Repositories</h2>
+      <p class="section-desc">Open-source code repositories, version control commits, and collaborative projects on GitHub.</p>
+    </div>
+
+    <div class="mb-4">
+      <a class="btn-o btn-magnetic" href="https://github.com/camposjohnearl-byte" target="_blank" rel="noopener">
+        <i class="bi bi-github"></i> Visit My GitHub Profile <i class="bi bi-arrow-right ms-1"></i>
+      </a>
+    </div>
+
+    <div id="repoGrid" class="grid3"></div>
+  </div>
+</section>
+
+<!-- 10. CONTACT -->
+<section id="contact">
+  <div class="container reveal">
+    <div class="section-header">
+      <div class="section-tag"><i class="bi bi-chat-dots-fill"></i> 09 // INQUIRIES</div>
+      <h2>Contact</h2>
+      <p class="section-desc">Get in touch for internships, junior developer opportunities, or technical project collaborations.</p>
+    </div>
+
+    <div class="grid2">
+      <!-- Contact Channels Card -->
+      <div class="card">
+        <h3 class="contact-card-title"><i class="bi bi-person-lines-fill text-primary me-2"></i>Direct Channels</h3>
+        <p class="contact-card-desc">
+          Feel free to reach out directly through email or professional networking platforms. I respond promptly to recruitment inquiries.
+        </p>
+
+        <ul class="contact-list">
+          <li class="contact-item">
+            <div class="contact-item-left">
+              <div class="contact-icon"><i class="bi bi-envelope-at-fill"></i></div>
+              <div>
+                <div class="contact-item-title">Primary Email</div>
+                <div class="contact-item-val">
+                  <a id="emailLink" href="mailto:camposjohnearl@gmail.com">camposjohnearl@gmail.com</a>
+                </div>
+              </div>
+            </div>
+            <button id="copyEmailBtn" class="copy-btn" type="button" aria-label="Copy email address">
+              <i class="bi bi-clipboard"></i> Copy
+            </button>
+          </li>
+
+          <li class="contact-item">
+            <div class="contact-item-left">
+              <div class="contact-icon contact-icon-linkedin"><i class="bi bi-linkedin"></i></div>
+              <div>
+                <div class="contact-item-title">LinkedIn Profile</div>
+                <div class="contact-item-val">
+                  <a href="https://www.linkedin.com/in/johnearl-campos-39a609385/?isSelfProfile=true" target="_blank" rel="noopener">LINKEDIN</a>
+                </div>
+              </div>
+            </div>
+            <i class="bi bi-box-arrow-up-right text-muted"></i>
+          </li>
+
+          <li class="contact-item">
+            <div class="contact-item-left">
+              <div class="contact-icon contact-icon-github"><i class="bi bi-github"></i></div>
+              <div>
+                <div class="contact-item-title">GitHub Profile</div>
+                <div class="contact-item-val">
+                  <a href="https://github.com/camposjohnearl-byte" target="_blank" rel="noopener">GITHUB</a>
+                </div>
+              </div>
+            </div>
+            <i class="bi bi-box-arrow-up-right text-muted"></i>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Message Form with Animated Floating Labels -->
+      <form id="contactForm" class="card" novalidate>
+        <h3 class="form-title"><i class="bi bi-send-fill text-primary me-2"></i>Send a Direct Message</h3>
+        <p class="note form-desc">Fill out the form below to initiate an inquiry directly via your default mail client.</p>
+
+        <div class="form-group">
+          <input id="cName" type="text" autocomplete="name" placeholder=" " required>
+          <label for="cName"><i class="bi bi-person me-1"></i> Your Name</label>
+          <small class="err" id="eName" role="alert"></small>
+        </div>
+
+        <div class="form-group">
+          <input id="cEmail" type="email" autocomplete="email" placeholder=" " required>
+          <label for="cEmail"><i class="bi bi-envelope me-1"></i> Your Email Address</label>
+          <small class="err" id="eEmail" role="alert"></small>
+        </div>
+
+        <div class="form-group">
+          <textarea id="cMsg" rows="5" placeholder=" " required></textarea>
+          <label for="cMsg"><i class="bi bi-chat-square-text me-1"></i> Message</label>
+          <small class="err" id="eMsg" role="alert"></small>
+        </div>
+
+        <button class="btn-a form-submit-btn btn-magnetic" type="submit">
+          <i class="bi bi-send"></i> <span id="submitText">Send Message</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 11. REFLECTION -->
+<section id="reflection" class="alt">
+  <div class="container reveal">
+    <div class="section-header">
+      <div class="section-tag"><i class="bi bi-journal-richtext"></i> 10 // SYNTHESIS</div>
+      <h2>Reflection</h2>
+      <p class="section-desc">Comprehensive reflection on growth, technical obstacles overcome, and readiness for the technology sector.</p>
+    </div>
+
+    <div class="card prose">
+      <div class="reflection-tags">
+        <span class="tag tag-purple"><i class="bi bi-clock-history"></i> Capstone Essay</span>
+      </div>
+
+      <p class="reflection-prose">
+        My Journey in IT
+Before starting my BS IT degree, my knowledge was very basic—mostly centered around daily computer use, simple troubleshooting, and using basic applications. I knew little about coding, databases, or how web systems actually worked.
+
+Through my studies, the most important things I learned were web development, database management, and hardware integration. I built skills in PHP, MySQL, HTML, CSS, JavaScript, and tools like Visual Studio Code and XAMPP.
+
+The project that taught me the most was building a school gateway access control system using an Orange Pi PC. It combined RFID card scanning with camera-based face detection using Python and OpenCV. This project showed me how software and hardware work together in the real world.
+
+My biggest technical challenge was setting up secure payment processing and API integrations, such as connecting GCash payments to an e-commerce platform. It required precise error handling, secure webhooks, and careful debugging to ensure transactions were reliable and safe.
+
+Since starting college, my IT skills have grown from basic computer literacy to building full-stack web applications and hardware projects. While I still want to improve my knowledge in cloud computing and advanced cybersecurity, I am confident in my core development skills.
+
+I want to become a Full Stack Developer who builds reliable, practical software. Having completed projects ranging from administrative systems to e-commerce and hardware integration, I am fully ready to apply my knowledge and begin my career in the IT industry.
+      </p>
+
+      <div class="acc-grid mt-4">
+        <div class="acc-block">
+          <div class="acc-block-title info"><i class="bi bi-check2"></i> Reflection Prompt 1</div>
+          <p class="acc-block-desc">Evolution from beginner curiosity to engineering discipline throughout the BSIT curriculum.</p>
+        </div>
+        <div class="acc-block">
+          <div class="acc-block-title info"><i class="bi bi-check2"></i> Reflection Prompt 2</div>
+          <p class="acc-block-desc">Analysis of technical roadblocks, algorithmic hurdles, and perseverance strategies developed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-brand-wrap">
+      <span class="brand-badge brand-badge-sm"><i class="bi bi-code-slash"></i></span>
+      <span data-name class="footer-name">[YOUR NAME]</span>
+    </div>
+    <div>BSIT Industry-Ready Portfolio &bull; Datamex College of Saint Adeline &bull; &copy; <span id="year"></span></div>
+    <div class="footer-badge">Designed with Modern Cyber-Minimalist Bento Aesthetic</div>
+  </div>
+</footer>
+
+<!-- Back to Top Floating Button with Circular SVG Progress Ring -->
+<button id="toTop" class="top" aria-label="Back to top">
+  <svg class="progress-ring" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+    <circle class="progress-ring-track" cx="24" cy="24" r="20"></circle>
+    <circle class="progress-ring-fill" cx="24" cy="24" r="20"></circle>
+  </svg>
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Project Details Modal -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" hidden>
+  <div class="modal-box">
+    <button id="mClose" class="m-close" aria-label="Close details dialog">
+      <i class="bi bi-x-lg"></i>
+    </button>
+    <div id="mBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
