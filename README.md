@@ -44,7 +44,7 @@ To run or modify this project locally, follow these simple steps:
 
 Clone the repository:
 
-git clone https://github.com/camposjohnearl-byte/modern-portfolio.git
+git clone https://github.com/camposjohnearl-byte/CAMPOS_PORTFOLIO.git
 
 
 Navigate to the project directory:
@@ -62,7 +62,7 @@ Open the folder in Visual Studio Code and use the Live Server extension for a lo
 
 Check out the live deployment of the portfolio here:
 
-👉 https://camposjohnearl-byte.github.io/modern-portfolio/ (Update link if hosted elsewhere)
+👉 https://camposjohnearl-byte.github.io/CAMPOS_PORTFOLIO/ (Update link if hosted elsewhere)
 
 🤝 Contributing
 
