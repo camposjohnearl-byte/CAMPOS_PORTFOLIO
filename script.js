@@ -6,7 +6,7 @@
 const OWNER = { 
   name: 'JOHN EARL P. CAMPOS', 
   email: 'camposjohnearl@gmail.com',
-  title: '[PROFESSIONAL TITLE, e.g. Junior Full-Stack Developer]',
+  title: 'Junior Full-Stack Developer',
   lead: 'BSIT Graduate specialized in building high-performance, accessible, and secure digital applications. Ready for junior developer and engineering roles.',
   linkedin: '[LINKEDIN URL]',
   github: 'https://github.com/camposjohnearl-byte',
