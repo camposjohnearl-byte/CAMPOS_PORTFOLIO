@@ -1646,6 +1646,40 @@ article.card {
   font-size: 0.92rem;
 }
 
+/* Embedded video proof (native <video> or <iframe>) */
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.video-container:hover,
+.video-container:focus-within {
+  border-color: var(--line-highlight);
+}
+.video-container video,
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: inherit;
+  object-fit: contain; /* keeps native ratio, letterboxed on black */
+  background: #000;
+  color-scheme: dark; /* dark native controls */
+}
+.video-container video:focus-visible {
+  outline: 2px solid var(--line-highlight);
+  outline-offset: -2px;
+}
+
 .roadmap {
   display: grid;
   grid-template-columns: 1fr;
