@@ -67,8 +67,8 @@ const README = [
 // Any README key you leave out shows "[Add ...]" automatically.
 const PROJECTS = [
   { 
-    title: 'FUZZY WIRE SHOP', 
-    type: 'Web E-Commerce Application (HTML, CSS, JS, PHP, MySQL)',
+    title: 'AccessPoint Visitor Management System', 
+    type: 'Web Appointment System (HTML, CSS, JS, MySQL)',
     overview: 'Full-featured web application designed to solve real-world workflows with responsive design, secure authentication, and AI assistance.', 
     tech: ['[Tech 1]', '[Tech 2]', 'Bootstrap 5', 'REST API'],
     features: ['Modern UI', 'Relational Database', 'CRUD Operations', 'Input Validation', 'Search & Filtering', 'Authentication & Authorization', 'Robust Error Handling'],
