@@ -74,10 +74,6 @@ const PROJECTS = [
     features: ['Modern UI', 'Relational Database', 'CRUD Operations', 'Input Validation', 'Search & Filtering', 'Authentication & Authorization', 'Robust Error Handling'],
     live: 'https://camposjohnearl-byte.github.io/AccessPoint-VISITOR-MANAGEMENT/', 
     github: 'https://github.com/camposjohnearl-byte/AccessPoint-VISITOR-MANAGEMENT', 
-    readme: { 
-      Overview: 'Interactive application delivering streamlined user flows and resilient architecture.', 
-      Developer: '[Your name, section, contact]' 
-    } 
   },
   { 
     title: 'Mini Inventory Management System', 
@@ -87,7 +83,6 @@ const PROJECTS = [
     features: ['Dynamic Charts', 'Data Cleaning Pipeline', 'SQL Aggregations', 'Executive KPI Interpretation'],
     live: 'https://miniinventory.infinityfree.io/?fbclid=IwY2xjawU_9OdleHRuA2FlbQIxMABwZG9mBWJyaWQRMUNGd2hncHJTQjJianhTWHBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEe2vMs8HHRaWdCrAk5HWo-AExT_2Jzp9EfEhxrOU1q7It09FPnnMm6NVO46iA_aem_gaEuO03NQ3SnQj3qLDoFzw&i=1', 
     github: '[GITHUB REPO URL]',
-    readme: {} 
   },
   { 
     title: 'Smart-File Organizer', 
@@ -97,7 +92,6 @@ const PROJECTS = [
     features: ['[Key Feature 1]', '[Key Feature 2]', 'Performance Optimization'],
     live: 'https://mega.nz/file/iAVzBIQJ#JVckngmvrXPCcEJhcYlhOdnXSXLdRMM-3EmMBumA6rw', 
     github: 'https://github.com/Rhaast45/Smart-File-Organizer', 
-    readme: {} 
   }
 ];
 
